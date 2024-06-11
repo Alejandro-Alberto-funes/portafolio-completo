@@ -337,11 +337,19 @@
 
 
     <section id="contacto">
-        <h3 class="titulo-seccion">Contact Form</h3>
+        <h3 class="titulo-seccion">Contact</h3>
         <div id="form-messages"></div> <!-- Aquí se mostrará el mensaje de confirmación -->
-        <form id="contact-form" action="send_mail.php" method="post">
+        <form id="contact-form" action="https://formsubmit.co/funesalberto99@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://alejandro-alberto-funes.github.io/portafolio-completo/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje, te responderemos pronto.">
+            <input type="hidden" name="_cc" value="joanstevengomezcontreras@gmail.com">
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+
+            <label for="name">Email:</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required>
@@ -349,7 +357,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send to</button>
+            <button type="submit">Send</button>
         </form>
     </section>
 

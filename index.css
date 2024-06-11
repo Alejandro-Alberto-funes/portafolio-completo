@@ -42,14 +42,16 @@ html {
 #inicio .contenido header .contenido-header h1 {
     text-align: center;
     color: #50ebff;
-    padding-left: 80px;
+    padding-left: -20px;
+    padding-top: 5px;
+    padding-right: 30px;
 }
 
 #inicio .contenido header .contenido-header nav ul {
     list-style: none;
     display: flex;
     align-items: space-between;
-    width: 550px;
+    width: 800px;
 
 }
 
