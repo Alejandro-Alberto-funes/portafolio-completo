@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css">
+    <link rel="website icon" href="/img/logo_personal.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <title>My Portfolio</title>
+
+    <!-- Estilos personalizados para el botón de Google Translate -->
+    <style>
+        #google_translate_element {
+            position: fixed;
+            top: 20px; /* Ajusta esta propiedad según sea necesario */
+            right: 20px; /* Ajusta esta propiedad según sea necesario */
+            z-index: 9999; /* Asegura que esté por encima de otros elementos */
+        }
+
+        /* Estilos para la frase */
+        header .contenido-header h1 {
+            text-align: right; /* Alinea el texto a la derecha */
+            margin-right: 2000px; /* Ajusta el margen izquierdo según sea necesario */
+            font-size: 0.8em; /* Tamaño de fuente más pequeño */
+            margin-right: auto; /* Esto centra el texto verticalmente dentro de su contenedor */
+            margin-top: 10px; /* Espacio superior */
+        }
+        /* Estilos para las tarjetas de referencia */
+        #referencias .contenedor-columnas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        #referencias .title {
+            text-align: center;
+            margin: 30px;
+            font-size: 30px;
+        }
+
+        .referenciasTarjetas {
+            flex: 1 1 calc(33.333% - 20px);
+            /* Tres tarjetas por fila */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .referenciasTarjetas hr {
+            margin: 10px 0;
+        }
+
+        .btn-descargar {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #cef3f8;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-descargar:hover {
+            background-color: #45cddc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SECCION I N I C I O Suvido en Git hub -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>"Pursuing excellence through 
+                        Error Detection and Corrections"</h1> <!-- Frase agregada -->
+                    <img src="img/logo_personal.jpg" alt="logo" class="logo">
+                  
+                    
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">BEGINNING</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">ABOUT ME</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">SUCCESS STORIES</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">TESTIMONIAL</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">CONTACT</a></li>
+                            <select name="" id="miselec" onchange="redireccionar()" class="btn-traductor">
+                                <option value="all">Traducir</option>
+                                <option value="ingles">Inglés</option>
+                                <option value="espanol">Español</option>
+                            </select>                        
+                        </ul>
+                    </nav>
+
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/alejandro-funes-a963702b7/?trk=public-profile-join-page" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Alejandro-Alberto-funes" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Welcome</p>
+                <h2>I'm </span>Alejandro Funes</h2>
+                <p class="descripcion"> I am a beginner in the area of QA Tester.</p>
+                <a href="#sobremi">About me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="ARCHIVO\fotosfunes.jpeg" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">About Me</p>
+            <h2>Hi, I'm<span>Alejandro Funes</span> </h2>
+            <h3></h3>
+            <p>My job is to ensure software quality by identifying, documenting, and troubleshooting, thus ensuring that digital products are reliable and meet end-user expectations.</p>
+            <hr>
+            <p>My soft skills, I communicate clearly and simply, I am able to collaborate productively with different stakeholders and cross-functional teams. I am a problem solver, able to adapt quickly to changes and find innovative solutions even in challenging situations.</p>
+            <hr>
+            <p>My hard skills include solid experience in creating and executing detailed test cases, as well as using various testing tools and techniques. This allows me to detect and fix bugs efficiently, ensuring that every function and feature of a web application works as expected.</p>
+                <h2><span>Professional Values</span></h2>
+                    <p><strong>Commitment to quality:</strong> I always look for the software to meet the established quality standards. Although I'm an amateur, I strive to conduct extensive testing and catch bugs.</li>
+                    <p><strong>Continuous Learning:</strong> I am always willing to learn about new techniques, tools and methodologies in the field of software quality. I am constantly working on my skills and knowledge on an ongoing basis.</li>
+                    <p><strong>Responsibility:</strong> I recognize that it is important to my role in the software development team. Therefore, I am committed to carrying out my tasks responsibly and professionally at all times.</li>
+                    <p><strong>Teamwork:</strong> I work and adapt collaboratively with project management development teams to ensure a greater understanding of software requirements and quality goals.</li>
+                    <p><strong>Attention to detail:</strong> I pay special attention to details. My main goal is to accurately identify and document any issues in the software.</li>
+                    <p><strong>Effective Communication:</strong> I communicate with my co-workers in the best way. I always update my team on the progress of testing, problems encountered, and possible solutions.</p>
+                    <a href="ARCHIVO/Currículum ingles.pdf" download="Currículum alejandro funes.pdf">Download Curriculum Vitae</a>
+                </div>
+        </div>
+    </section>
+
+    <!-- SECCION FOOTER -->
+    <footer>
+        <p></p>
+        </div>
+
+    </footer>
+
+
+    <style>
+        .servicio {
+            margin-bottom: 100px; /* Ajusta este valor para reducir la separación entre los cuadros */
+        }
+    </style>
+    
+    <section id="servicios">
+        <h3 class="titulo-seccion">SUCCESS STORIES</h3>
+        <div class="fila">
+            <div class="servicio">
+                <img src="img/abecedario.jpeg" alt="Imagen de experiencia" style="display: block; margin: 10px auto 40px; width: 50%;">
+                <hr>
+                <h4>Alphabet for Kids</h4>
+                <hr>
+                <p><strong>Project Objective</strong>
+                    <p>We created an educational tool aimed at teaching the alphabet to children in an interactive and engaging way.</p> 
+                     <hr>
+                     <p><strong>Overview of the Work Process</strong>
+                     <p>The project involved multiple stages of development, starting from requirement gathering, designing interactive lessons, implementing the lessons in Java, and conducting rigorous quality assurance testing to ensure educational effectiveness and a user-friendly experience.</p>
+                     <hr>
+                     <p><strong>Role and Responsibilities</strong>
+                     <p>Tester and Documenter: I played a crucial role in ensuring the software's quality through detailed quality testing.</p> 
+                     <hr>
+                     <p><strong>Documentation Leader:</strong>
+                     <p>The documentation process was managed to ensure that all aspects of the project were well documented, facilitating smooth transitions between development phases and clear communication among team members.</p> 
+                     <hr>
+                     <p><strong>Management of Tools and Progress:</strong>
+                     <p>tools for tracking progress and quality control, ensuring that project milestones were met on time and with the desired quality levels.</p> 
+                     <hr>
+                     <p><strong>Programming Languages Used</strong>
+                     <p>Java</p>
+            </div>
+        </div>
+    </section>
+    <section id="servicios">
+        <div class="fila">
+            <div class="servicio">
+                <img src="img/wonder.jpeg" alt="Imagen de experiencia" style="display: block; margin: 10px auto 40px; width: 80%;">
+                <hr>
+                <h4>Local Wonder SV</h4>
+                <hr>
+                <p><strong>Project Objective</strong>
+                    <p>The creation of Local Wonder SV, a web application specifically designed for a beauty salon, aims to enhance the customer experience by enabling online reservations, displaying services offered and promotions, and facilitating internal salon management.</p> 
+                     <hr>
+                     <p><strong>Overview of the Work Process</strong>
+                     <p>The development of Local Wonder SV involved various stages, starting with identifying the specific needs of the beauty salon, designing a user-friendly interface, implementing key functionalities such as reservation systems and service catalogs, and conducting rigorous tests to ensure the functionality and usability of the platform.</p>
+                     <hr>
+                     <p><strong>Role and Responsibilities</strong>
+                     <p><strong>Documentation and Management Tools Leader</strong>
+                     <p>Responsible for comprehensive project documentation and managing tracking tools to ensure an organized development that is consistent with the project's objectives.</p>
+                     <hr>
+                     <p><strong>Development of OKR and Roadmap Structures:</strong>
+                     <p>I developed the Objectives and Key Results (OKR) structures and the project roadmap, providing a clear framework for project planning and execution, focused on enhancing operational efficiency and customer satisfaction.</p> 
+                     <hr>
+                     <p><strong>Manual QA Tester</strong>
+                     <p>I used tools for tracking progress and quality control, ensuring that project milestones were met on time and with the desired quality levels. I conducted intensive manual tests to validate every aspect of the application, from the functionality of the interface to the security of online transactions, ensuring that the application met quality standards and customer expectations before its official release.</p> 
+                     <hr>
+                     <p><strong>Programming Languages Used</strong>
+                     <p>PHP, SQL.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="servicios">
+        <div class="fila">
+            <div class="servicio">
+                <img src="img/equipo.jpeg" alt="Imagen de experiencia" style="display: block; margin: 10px auto 40px; width: 80%;">
+                <hr>
+                <h4>STUDENT PARTICIPATION</h4>
+                <hr>
+                <p>As an actively engaged student both inside and outside the classroom, I have had the opportunity to deeply involve myself in the student association of my faculty. This experience has been fundamental for my personal and professional development, providing me with a platform to apply and enhance my skills in a real and significant context.</p>
+                <hr>
+                <p><strong>Community Initiatives:</strong></p>
+                <p>We are currently organizing a food drive to support the elderly in the local community, demonstrating our commitment to social responsibility and support for those in need.</p>
+                <hr>
+                <p><strong>Collaborator in Student Projects:</strong></p>
+                <p>I have collaborated on various projects aimed at improving the well-being and academic enrichment of students.</p>
+                <hr>
+                <p><strong>Student Well-being Collaborator:</strong></p>
+                <p>I have actively participated in the mental and physical health of students, ensuring that the academic environment is also a space for support and personal growth.</p>
+                <hr>
+                <p><strong>Impact and Achievements</strong></p>
+                <p><strong>Improvement of the Student Environment:</strong></p>
+                <p>Through my participation, I have helped to create a more inclusive and enriching environment for students, where academic excellence and overall well-being are fostered.</p>
+                <hr>
+                <p><strong>Community Support:</strong></p>
+                <p>The food collection initiative has had a significant positive impact on the lives of the elderly in our community, reinforcing the importance of solidarity and mutual support.</p>                
+            </div>
+        </div>
+    </section>
+    
+    <!--Mover aqui-->
+    <!--Referencias-->
+    <section id="referencias">
+        <h3 class="title">REFERENCES</h3><br>
+        <div class="contenedor-columnas">
+            <div class="referenciasTarjetas">
+                <hr>
+                <h4>Lic. Herbert René Cordero Henriquez</h4>
+                <hr>
+                <p style="margin-left: 60px;">Gerardo Barrios University Professor</p>
+                <!-- BOTON PARA DESCARGAR REFERENCIA -->
+                <a href="referencias/refCordero.pdf" class="btn-descargar" download>Download References</a>
+            </div>
+            <div class="referenciasTarjetas">
+                <hr>
+                <h4>Lic. Oscar Roberto Torres Rodríguez</h4>
+                <hr>
+                <p style="margin-left: 60px;">Gerardo Barrios University Professor</p>
+                <!-- BOTON PARA DESCARGAR REFERENCIA -->
+                <a href="referencias/refTorres.pdf" class="btn-descargar" download>Download References</a>
+            </div>
+            <div class="referenciasTarjetas">
+                <hr>
+                <h4>Lic. José Ovidio Ramos Alcántar</h4>
+                <hr>
+                <p style="margin-left: 60px;">Vice Dean of the Faculty of Science and Technology of the Gerardo Barrios University.</p>
+                <!-- BOTON PARA DESCARGAR REFERENCIA -->
+                <a href="referencias/refOvidio.pdf" class="btn-descargar" download>Download References</a>
+            </div>
+            <div class="referenciasTarjetas">
+                <hr>
+                <h4>Ing. Alcir Gustavo Quintanilla Rodríguez</h4>
+                <hr>
+                <p style="margin-left: 60px;">Gerardo Barrios University Professor</p>
+                <!-- BOTON PARA DESCARGAR REFERENCIA -->
+                <a href="referencias/refAlcir.pdf" class="btn-descargar" download>Download References</a>
+            </div>
+            <div class="referenciasTarjetas">
+                <hr>
+                <h4>Ing. Marvin Osmaro Parada</h4>
+                <hr>
+                <p style="margin-left: 60px;">Gerardo Barrios University Professor</p>
+                <!-- BOTON PARA DESCARGAR REFERENCIA -->
+                <a href="referencias/refOsmaro.pdf" class="btn-descargar" download>Download References</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Awards and Recognitions</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="award-item">
+                        <a href="/img/Certificado_aws.png" data-lightbox="awards" data-title="Award for Excellence in Web Design">
+                            <img src="/img/Certificado_aws.png" alt="Award for Excellence in Web Design" class="img-fluid">
+                        </a>
+                        <h4>AWS Discovery Day Certificate: Introduction to Cloud and AWS Services</h4>
+                        <p>This certificate was granted in 2023 after attending the AWS Discovery Day. This event provided a detailed introduction to the fundamental concepts of the cloud and the services offered by AWS, equipping attendees with the knowledge necessary to pursue future AWS certifications and to implement cloud solutions in professional environments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="award-item">
+                        <a href="img/Certificado_red2.png" data-lightbox="awards" data-title="Developer of the Year Recognition">
+                            <img src="img/Certificado_red2.png" alt="Developer of the Year Recognition" class="img-fluid">
+                        </a>
+                        <h4>CCNAv7 Certificate: Introduction to Networks</h4>
+                        <p>This certificate was awarded in 2023 for successfully completing the 'Introduction to Networks' course from the Cisco Networking Academy. The course covered the basic principles of networks, including their design, structure, and analysis, which are essential for the development and management of modern communication networks.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="award-item">
+                        <a href="img/Certificado_red.png" data-lightbox="awards" data-title="CCNAv7 Certificate: Switching, Routing and Wireless Essentials">
+                            <img src="img/Certificado_red.png" alt="CCNAv7 Certificate: Switching, Routing and Wireless Essentials" class="img-fluid">
+                        </a>
+                        <h4>CCNAv7 Certificate: Switching, Routing and Wireless Essentials</h4>
+                        <p>This certificate was issued in 2024 following the successful completion of the 'Switching, Routing and Wireless Essentials' course offered by Cisco Networking Academy. This recognition validates skills in configuring, managing, and troubleshooting networks that include switching and routing techniques, as well as fundamental knowledge for the implementation of wireless solutions in corporate environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contact Form</h3>
+        <div id="form-messages"></div> <!-- Aquí se mostrará el mensaje de confirmación -->
+        <form id="contact-form" action="send_mail.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send to</button>
+        </form>
+    </section>
+
+   
+    <footer>
+        <div class="contenedor-footer">
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/alejandro-funes-a963702b7/?trk=public-profile-join-page" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Alejandro-Alberto-funes" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="informacion" style="text-align: left; font-size: 18px; padding-left: 20px;">
+                <p>Post office: funesalberto99@gmail.com usis003121@ugb.edu.sv</p>
+                <p>phone number: 7591-6139.</p>
+                <p>Address: Colonia Espíritu Santo, Pasaje 12 Casa 10, Usulután.</p>
+                <p>Computer Systems and Network Engineering, Cycle VII.</p>
+            </div>
+        
+            <p>&copy; 2024 Alejandro Funes</p>
+            <p>Powered by por Alejandro Funes</p>
+        </div>
+
+            <div class="imagen-grande" style="float: right; margin-right: 100px; margin-top: -150px;">
+                <img src="img/logo_personal.jpg" alt="" class="logo2">
+            </div>
+        </div>
+       
+    </footer>
+    
+    
+    
+    
+    
+    <!-- Botón de Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Scripts -->
+  
+    <script>
+        function redireccionar() {
+          var selectValue = document.getElementById("miselec").value;
+          
+          if (selectValue === "ingles") {
+            window.location.href = "ingles.html";
+          } else if (selectValue === "espanol") {
+            window.location.href = "index.html";
+          }
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
